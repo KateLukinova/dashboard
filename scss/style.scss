@@ -131,6 +131,8 @@ table {
 $acc-color: #363740;
 $body-color: #252733;
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 
 body {
   width: 100vw;
@@ -397,15 +399,20 @@ button.button, a.button {
     p {
       font-family: "Muli-Regular", sans-serif;
       color: $body-color;
-      font-size: 18px;
-      line-height: 2.5;
+      font-size: 14px;
+      line-height: 1.5;
       letter-spacing: 0.4px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 20px;
+      max-width: 600px;
+      &.p-message {
+        font-size: 18px;
+        line-height: 2.5;
+      }
     }
     .alert-notice {
-      font-size: 20px;
+      font-size: 16px;
       color: #f44336;
     }
     &.card-block {
@@ -526,6 +533,7 @@ form {
   -ms-flex-align: center;
   align-items: center;
   max-width: 800px;
+  margin-top: 20px;
   h2 {
     -ms-flex-item-align: start;
     align-self: flex-start;
@@ -602,21 +610,38 @@ form {
 
 @media screen and (max-width: 990px) {
   .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .sidebar {
+    -webkit-transition: all 0.3s ease ;
+    -o-transition: all 0.3s ease ;
     transition: all 0.3s ease ;
     height: 60px;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
     min-height: max-content;
     width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 15px;
     nav {
       display: none;
       &.nav-mobile--show {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: fixed;
         top: 60px;
@@ -625,6 +650,7 @@ form {
         height: calc(100vh - 60px);
         background-color: #252733;
         z-index: 10;
+        -webkit-animation: menu-show 0.5s ease;
         animation: menu-show 0.5s ease;
         .nav__item {
           padding-left: 15px;
@@ -637,12 +663,23 @@ form {
     }
   }
   .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 30px;
     height: 20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     span {
       width: 100%;
@@ -650,16 +687,22 @@ form {
       background-color: white;
     }
     &.open {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       span {
         &.line {
           display: none;
         }
         &.line-top {
+          -webkit-transform: rotate(-45deg) translate(-2px, 3px);
+          -ms-transform: rotate(-45deg) translate(-2px, 3px);
           transform: rotate(-45deg) translate(-2px, 3px);
 
         }
         &.line-bottom {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
           transform: rotate(45deg);
         }
       }
@@ -672,6 +715,14 @@ form {
       p {
         font-size: 14px;
       }
+    }
+  }
+  @-webkit-keyframes menu-show {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
     }
   }
   @keyframes menu-show {
@@ -705,7 +756,12 @@ form {
   form {
     .fieldset {
       .input-row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         .input-box {
           width: 100%;
@@ -720,18 +776,30 @@ form {
 @media screen and (max-width: 540px) {
   .main-section {
     .header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: flex-end;
       h1 {
+        -ms-flex-item-align: start;
         align-self: flex-start;
         margin-top: 20px;
       }
     }
     .content {
       &.card-block {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         .card-block__btn {
+          -ms-flex-item-align: end;
           align-self: flex-end;
           margin-top: 25px;
         }
@@ -739,6 +807,5 @@ form {
     }
   }
 }
-
 
 
