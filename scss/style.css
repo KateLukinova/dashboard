@@ -154,6 +154,7 @@ button.button, a.button {
   height: auto; }
 
 .sidebar {
+  position: fixed;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 18.8%;
@@ -243,7 +244,8 @@ button.button, a.button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 82.2%;
-  padding: 0 2%; }
+  padding: 0 2%;
+  margin-left: 18.8%; }
   .main-section .header {
     width: 100%;
     display: -webkit-box;
@@ -271,11 +273,11 @@ button.button, a.button {
       -ms-flex-align: center;
       align-items: center; }
       .main-section .header .account-block .message-icon {
+        z-index: 0;
         position: relative;
         color: #C5C7CD;
         font-size: 16px; }
         .main-section .header .account-block .message-icon .true {
-          z-index: 2;
           position: absolute;
           top: 0;
           right: 0;
@@ -618,8 +620,10 @@ form {
         transform: rotate(45deg); }
 
   .main-section {
+    margin-left: 0;
     width: 100%;
-    padding: 0 15px; }
+    padding: 0 15px;
+    box-sizing: border-box; }
     .main-section .content p {
       font-size: 14px; }
 
@@ -653,11 +657,12 @@ form {
     -ms-flex-align: center;
     align-items: center; }
     form .fieldset .input-row .input-box {
-      width: 100%; }
+      width: 90%; }
     form .fieldset .input-row .input-col {
       width: 100%; } }
 @media screen and (max-width: 540px) {
   .main-section .header {
+    margin-top: 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
