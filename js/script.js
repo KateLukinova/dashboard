@@ -4,8 +4,10 @@ $(document).ready(function() {
         $(".sidebar nav").toggleClass("nav-mobile--show");
         $(".message-icon").toggleClass("no-visible");
     });
+
+
     $('.popup-open').click(function() {
-        $('.popup-fade').fadeIn();
+        $('#active-card').fadeIn();
         return false;
     });
 
@@ -15,6 +17,25 @@ $(document).ready(function() {
     });
     $('.popup-close-ok').click(function() {
         $(this).parents('.popup-fade').fadeOut();
+        return false;
+    });
+    $('.popup-ok').click(function() {
+        let modal = $(this).parents('.popup-fade');
+        let modalId = modal.attr("id");
+        modal.fadeOut();
+        let newModal = '';
+        switch (modalId) {
+            case "active-card":
+                newModal = "popup-sms-pin";
+                break
+            case "popup-sms-pin":
+                newModal = "popup-pin";
+                break
+            case "popup-pin":
+                newModal = "popup-congratulations";
+                break
+        }
+        $('#' + newModal).fadeIn();
         return false;
     });
 
