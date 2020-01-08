@@ -273,10 +273,13 @@ button.button, a.button {
       -ms-flex-align: center;
       align-items: center; }
       .main-section .header .account-block .message-icon {
-        z-index: 0;
+        z-index: 1;
         position: relative;
         color: #C5C7CD;
-        font-size: 16px; }
+        font-size: 16px;
+        cursor: pointer; }
+        .main-section .header .account-block .message-icon.no-visible {
+          z-index: -1; }
         .main-section .header .account-block .message-icon .true {
           position: absolute;
           top: 0;
@@ -531,6 +534,79 @@ form {
 .menu-icon {
   display: none; }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 90%;
+  max-width: 534px;
+  background: #fff;
+  border-radius: 8px;
+  z-index: 99999;
+  opacity: 1;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .popup .popup__caption {
+    font-family: "Muli-Light", sans-serif;
+    font-size: 24px;
+    color: #646464;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 15px 0;
+    margin-bottom: 30px; }
+  .popup .input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 390px; }
+    .popup .input-box label {
+      font-family: "Muli-SemiBold", sans-serif;
+      font-size: 12px;
+      color: #0D0D0D;
+      letter-spacing: 0.4px;
+      margin: 15px 0;
+      margin-top: 30px; }
+    .popup .input-box input {
+      border: 1px solid #F0F0F0;
+      border-radius: 100px;
+      height: 50px;
+      outline: none;
+      box-shadow: none;
+      padding-left: 20px; }
+      .popup .input-box input:focus {
+        outline: none;
+        box-shadow: none; }
+  .popup a.button {
+    background: linear-gradient(179.43deg, #6979E3 -13.56%, #545ADA 42.89%, #281AC8 158.3%);
+    text-transform: uppercase;
+    min-width: 134px; }
+  .popup p {
+    margin: 30px 0; }
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+
+.popup-fade {
+  display: none; }
+
+.popup-fade:before {
+  content: '';
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999; }
+
 @media screen and (max-width: 990px) {
   .wrap {
     -webkit-box-orient: vertical;
@@ -624,6 +700,8 @@ form {
     width: 100%;
     padding: 0 15px;
     box-sizing: border-box; }
+    .main-section .header {
+      margin-top: 60px; }
     .main-section .content p {
       font-size: 14px; }
 
@@ -662,7 +740,6 @@ form {
       width: 100%; } }
 @media screen and (max-width: 540px) {
   .main-section .header {
-    margin-top: 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
