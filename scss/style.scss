@@ -719,6 +719,9 @@ form {
     display: flex;
     padding: 0;
     height: 50px;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
     span {
       display: flex;
       align-items: center;
@@ -813,7 +816,6 @@ form {
   font-size: 14px;
   margin: auto;
   text-align: center;
-
 }
 
 .login form .terms {
