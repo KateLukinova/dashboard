@@ -122,6 +122,10 @@ a {
   text-decoration: none;
   font-family: inherit; }
 
+input:focus, button:focus {
+  outline: none;
+  box-shadow: none; }
+
 button.button, a.button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -434,6 +438,8 @@ button.button, a.button {
           background-color: #11D030; }
           .main-section .content.card-block .card__status.active:before {
             content: 'active'; }
+      .main-section .content.card-block a.button {
+        width: 134px; }
       .main-section .content.card-block .card-block__btn {
         cursor: pointer;
         display: -webkit-box;
@@ -455,7 +461,8 @@ button.button, a.button {
         line-height: 15px;
         letter-spacing: 1px;
         color: #212121;
-        padding: 12px 25px; }
+        padding: 12px 25px;
+        width: 134px; }
     .main-section .content.form-block {
       background-color: transparent; }
 
@@ -663,6 +670,11 @@ form {
       border-radius: 8px; }
     .login form .input-box label {
       margin-bottom: 10px; }
+  .login form .input-forget {
+    display: none;
+    margin-top: 20px; }
+    .login form .input-forget input {
+      margin-bottom: 20px; }
 
 .login form .header > .sign {
   width: 50%;

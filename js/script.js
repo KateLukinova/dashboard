@@ -64,5 +64,9 @@ $(document).ready(function() {
         $(".login form .input-info").fadeOut(function() {
             $(".login form .reg-info").slideDown()
         });
+    });
+
+    $(".forget").click(function () {
+        $(".input-forget").css("display", "flex")
     })
 });
