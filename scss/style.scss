@@ -394,6 +394,9 @@ button.button, a.button {
     padding: 35px 0;
     border-radius: 8px;
     background-color: white;
+    &.login {
+      background-color: transparent;
+    }
     h2 {
       font-family: "Muli-Regular", sans-serif;
       color: #9FA2B4;
@@ -693,6 +696,134 @@ form {
   z-index: 9999;
 }
 
+.login {
+  margin-top: 50px
+}
+
+.login form {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.74);
+  overflow: hidden;
+  padding-bottom: 20px;
+  width: 90%;
+  max-width: 380px;
+  margin: 0px auto;
+  box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.4);
+  .header {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0;
+    height: 50px;
+    span {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-left: 20px;
+      font-family: "MuliBold", sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+  .input-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+    input {
+      border: none;
+      background: #F7F9FA;
+      display: block;
+      padding: 19px;
+      width: 100%;
+      outline: none;
+      margin: 1px auto;
+      transition: 0.3s;
+      color: #333;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+    label {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.login form .header>.sign {
+  width: 50%;
+  color: #fff;
+  background: linear-gradient(179.43deg, #3751FF -13.56%, #3751FF 158.28%, #281AC8 158.3%);
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.login form .header>.sign:hover {
+  opacity: 0.8
+}
+
+.login form .header>.reg {
+  width: 50%;
+  color: #fff;
+  background: #363740;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login form .header>.reg:hover {
+  opacity: 0.8
+}
+
+
+/*end header*/
+
+.login form .input-info, .login form .reg-info  {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.login form .reg-info {
+  display: none;
+}
+
+.login form input:focus {
+  background: #ddd;
+  border-radius: 5px;
+  border: 0;
+}
+
+.login form button {
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.login form .forget {
+  font-weight: bold;
+  color: #9FA2B4;
+  font-size: 14px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.login form .terms {
+  margin-right: 20px;
+  font-weight: bold;
+  color: #01aef2;
+  font-size: 10px;
+  float: right;
+  margin-top: 4px;
+}
 @media screen and (max-width: 990px) {
   .wrap {
     -webkit-box-orient: vertical;

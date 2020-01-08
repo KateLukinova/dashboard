@@ -51,4 +51,18 @@ $(document).ready(function() {
             $(this).fadeOut();
         }
     });
+
+    // enter form
+
+    $(".login .header .sign").click(function() {
+        $(".login form .reg-info").fadeOut(function() {
+            $(".login form .input-info").slideDown()
+        });
+    });
+
+    $(".login .header .reg").click(function() {
+        $(".login form .input-info").fadeOut(function() {
+            $(".login form .reg-info").slideDown()
+        });
+    })
 });
