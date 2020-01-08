@@ -95,7 +95,7 @@
                     <div class="card__status active"></div>
                 </div>
             </div>
-            <a href="#" class="button">Пополнить</a>
+            <a href="#" class="button replenish-open">Пополнить</a>
         </div>
     </section>
 </div>
@@ -168,6 +168,40 @@
         </div>
         <p>Pin-code успешно установлен</p>
         <a href="#" class="button popup-close-ok">Ok</a>
+    </div>
+</div>
+
+<div class="popup-fade" id="replenish-balance-modal">
+    <div class="popup">
+        <a class="popup-close" href="#">
+            <i class="fas fa-times"></i>
+        </a>
+        <div class="popup__caption">
+            Депозит
+        </div>
+        <div class="input-box">
+            <label for="select-currency">Валюта</label>
+            <select id="select-currency" name="select-currency">
+                <option value="value1" selected>Значение 1</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <label for="btc-address">BTC адрес кошелька</label>
+            <input class="copy-to-clipboard-input" type="text" id="btc-address" name="btc-address" value="39bS21vsDFyqqpvPLwtbFk47QGEWXJD1fJ"/>
+            <button class="copy-button">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <img src="img/img/qr.png" alt="qr" class="img-qr">
+        <div class="important-block">
+            <span>Важное</span>
+            <p>
+                Пожалуйста, отправляйте только BTC на этот адрес. Время обработки может быть разным.
+            </p>
+        </div>
+        <a href="#" class="button popup-ok">Ok</a>
     </div>
 </div>
 </body>

@@ -131,9 +131,6 @@ table {
 $acc-color: #363740;
 $body-color: #252733;
 
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
-
 body {
   width: 100vw;
   min-height: 100vh;
@@ -149,6 +146,7 @@ a {
 }
 input:focus, button:focus {
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -628,6 +626,8 @@ form {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding: 20px;
   width: 90%;
@@ -636,10 +636,20 @@ form {
   border-radius: 8px;
   z-index: 99999;
   opacity: 1;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   .popup__caption {
     font-family: "Muli-Light", sans-serif;
@@ -651,10 +661,16 @@ form {
     margin-bottom: 30px;
   }
   .input-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     max-width: 390px;
+    position: relative;
     label {
       font-family: "Muli-SemiBold", sans-serif;
       font-size: 12px;
@@ -663,20 +679,67 @@ form {
       margin: 15px 0;
       margin-top: 30px;
     }
-    input {
+    input, select {
       border: 1px solid #F0F0F0;
       border-radius: 10px;
       height: 50px;
       outline: none;
+      -webkit-box-shadow: none;
       box-shadow: none;
       padding-left: 20px;
+      padding-right: 40px;
       &:focus {
         outline: none;
+        -webkit-box-shadow: none;
         box-shadow: none;
       }
     }
+    .copy-button {
+      position: absolute;
+      right: 15px;
+      bottom: 14px;
+      background-color: transparent;
+      width: 20px;
+      height: 30px;
+      border:none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  .img-qr {
+    margin-top: 20px;
+  }
+  .important-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 390px;
+    span {
+      font-family: "MuliBold", sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #FF7D05;
+      margin-top: 30px;
+    }
+    p {
+      font-family: "Muli-Regular", sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #000000;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
   }
   a.button {
+    background: -o-linear-gradient(270.57deg, #6979E3 -13.56%, #545ADA 42.89%, #281AC8 158.3%);
     background: linear-gradient(179.43deg, #6979E3 -13.56%, #545ADA 42.89%, #281AC8 158.3%);
     text-transform: uppercase;
     min-width: 134px;
@@ -710,8 +773,15 @@ form {
 
 .login form {
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   background: rgba(255, 255, 255, 0.74);
   overflow: hidden;
@@ -719,19 +789,32 @@ form {
   width: 90%;
   max-width: 380px;
   margin: 0px auto;
+  -webkit-box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.4);
   box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.4);
   .header {
     overflow: hidden;
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     height: 50px;
     margin-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     span {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       height: 100%;
       padding-left: 20px;
@@ -742,9 +825,18 @@ form {
   }
   .input-box {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 20px;
     input {
@@ -755,8 +847,11 @@ form {
       width: 100%;
       outline: none;
       margin: 1px auto;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
       transition: 0.3s;
       color: #333;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       border-radius: 8px;
     }
@@ -776,9 +871,13 @@ form {
 .login form .header>.sign {
   width: 50%;
   color: #fff;
+  background: -o-linear-gradient(270.57deg, #3751FF -13.56%, #3751FF 158.28%, #281AC8 158.3%);
   background: linear-gradient(179.43deg, #3751FF -13.56%, #3751FF 158.28%, #281AC8 158.3%);
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -792,6 +891,8 @@ form {
   background: #363740;
   padding: 10px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -807,6 +908,7 @@ form {
   margin-top: 50px;
   width: 100%;
   padding: 0 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -948,6 +1050,7 @@ form {
     margin-left: 0;
     width: 100%;
     padding: 0 15px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     .content {
       p {
@@ -1036,7 +1139,7 @@ form {
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
-        .card-block__btn {
+        .card-block__btn, .replenish-open {
           -ms-flex-item-align: end;
           align-self: flex-end;
           margin-top: 25px;
@@ -1045,5 +1148,4 @@ form {
     }
   }
 }
-
 

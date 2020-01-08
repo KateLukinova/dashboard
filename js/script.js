@@ -11,6 +11,11 @@ $(document).ready(function() {
         return false;
     });
 
+    $('.replenish-open').click(function() {
+        $('#replenish-balance-modal').fadeIn();
+        return false;
+    });
+
     $('.popup-close').click(function() {
         $(this).parents('.popup-fade').fadeOut();
         return false;
@@ -68,5 +73,10 @@ $(document).ready(function() {
 
     $(".forget").click(function () {
         $(".input-forget").css("display", "flex")
-    })
+    });
+
+    $('.copy-button').on('click', function() {
+       $(this).siblings('input.copy-to-clipboard-input').select();
+        document.execCommand("copy");
+    });
 });
