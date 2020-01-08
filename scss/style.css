@@ -544,7 +544,7 @@ form {
   display: none; }
 
 .popup {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -988,6 +988,9 @@ form {
     .main-section .content.card-block .card-block__btn, .main-section .content.card-block .replenish-open {
       -ms-flex-item-align: end;
       align-self: flex-end;
-      margin-top: 25px; } }
+      margin-top: 25px; }
+
+  .popup {
+    margin-top: 50px; } }
 
 /*# sourceMappingURL=style.css.map */

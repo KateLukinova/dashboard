@@ -623,7 +623,7 @@ form {
   display: none;
 }
 .popup {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1146,6 +1146,9 @@ form {
         }
       }
     }
+  }
+  .popup {
+    margin-top: 50px;
   }
 }
 
