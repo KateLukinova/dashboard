@@ -133,6 +133,12 @@ input, select {
   outline: none;
   border: none;
   padding-left: 12px; }
+  input:required, select:required {
+    border: inherit; }
+  input:required:invalid, select:required:invalid {
+    border: 1px solid #F12B2C; }
+  input:required:valid, select:required:valid {
+    border: 1px solid #11D030; }
 
 input:focus, button:focus {
   outline: none;

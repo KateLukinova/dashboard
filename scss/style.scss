@@ -157,6 +157,15 @@ input, select {
   outline: none;
   border: none;
   padding-left: 12px;
+  &:required {
+    border: inherit;
+  }
+  &:required:invalid {
+    border: 1px solid #F12B2C;
+  }
+  &:required:valid {
+    border: 1px solid #11D030;
+  }
 }
 
 input:focus, button:focus {
