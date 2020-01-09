@@ -57,26 +57,19 @@ $(document).ready(function() {
         }
     });
 
-    // enter form
+    // account form
 
-    $(".login .header .sign").click(function() {
-        $(".login form .reg-info").fadeOut(function() {
-            $(".login form .input-info").slideDown()
-        });
+    $("#reg-form-button").click(function () {
+        $("form.enter-form").css('display', 'none');
+        $("form.registration").css('display', 'flex');
     });
-
-    $(".login .header .reg").click(function() {
-        $(".login form .input-info").fadeOut(function() {
-            $(".login form .reg-info").slideDown()
-        });
+    $("#enter-form-button").click(function () {
+        $("form.enter-form").css('display', 'flex');
+        $("form.registration").css('display', 'none');
     });
 
     $(".forget").click(function () {
         $(".input-forget").css("display", "flex")
     });
 
-    $('.copy-button').on('click', function() {
-       $(this).siblings('input.copy-to-clipboard-input').select();
-        document.execCommand("copy");
-    });
 });

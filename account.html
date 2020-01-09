@@ -78,14 +78,14 @@
 <!--            </div>-->
         </div>
         <div class="content login">
-            <form name="login">
-                <!-- start header -->
+            <a href="index.html" class="logo">
+                <img src="img/img/logo.svg" alt="logo">
+                <span class="logo__text">Embily</span>
+            </a>
+            <form name="login" class="enter-form">
                 <div class="header">
-                    <span class="sign">Вход</span>
-                    <span class="reg">Регистрация</span>
+                    Вход в Embily
                 </div>
-                <!-- end header -->
-
                 <div class="input-info">
                     <div class="input-box">
                         <label for="email-enter">Email</label>
@@ -96,18 +96,20 @@
                         <input type="password" id="password-enter" name="password-enter">
                     </div>
                     <button class="button">Вход</button>
-                    <a href="#" class="forget">Забыли пароль?</a>
+                    <a href="#" class="link-text forget">Забыли пароль?</a><br>
                     <div class="input-box input-forget">
                         <label for="email-password">Введите действующую почту</label>
                         <input type="email" id="email-password" name="email-password">
                         <button class="button">ok</button>
                     </div>
+                    <a href="#" class="link-text" id="reg-form-button">Зарегистрировать аккаунт</a>
+                </div>
+            </form>
+            <form name="login" class="registration">
+                <div class="header">
+                    Регистрация в Embily
                 </div>
                 <div class="reg-info">
-                    <div class="input-box">
-                        <label for="name-reg">Имя</label>
-                        <input type="text" id="name-reg" name="name-reg">
-                    </div>
                     <div class="input-box">
                         <label for="email-enter">Email</label>
                         <input type="email" id="email-reg" name="email-reg">
@@ -120,10 +122,14 @@
                         <label for="password-confirm">Password Confirm</label>
                         <input type="password" id="password-confirm" name="password-confirm">
                     </div>
-                    <button class="button">Зарегистрироваться</button>
+                    <button class="button">Продолжить</button>
                 </div>
-
+                <a href="#" class="link-text" id="enter-form-button">Уже есть аккаунт? Войти</a>
             </form>
+            <div class="link-block">
+                <a href="#" class="link-text">Политика конфиденциальности</a>
+                <a href="#" class="link-text">Условия использования</a>
+            </div>
         </div>
     </section>
 </div>

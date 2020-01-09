@@ -60,7 +60,7 @@
   font-style: italic; }
 @font-face {
   font-family: 'MuliBold';
-  src: local("Muli Bold"), local("Muli-Bold"), url("../fonts/Mulibold.woff2") format("woff2"), url("../fonts/Mulibold.woff") format("woff"), url("../fonts/Mulibold.ttf") format("truetype");
+  src: local("Muli Bold"), local("Muli-Bold"), url("../fonts/Muli-Bold.eot") format("eot"), url("../fonts/Muli-Bold.woff") format("woff"), url("../fonts/Muli-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 @font-face {
@@ -157,6 +157,24 @@ button.button, a.button {
   width: 100%;
   height: auto; }
 
+.logo {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 41px 0 41px 10.5%; }
+  .logo img {
+    margin-right: 12px; }
+  .logo .logo__text {
+    font-family: 'MuliBold', sans-serif;
+    color: #A4A6B3;
+    font-size: 19px; }
+
 .sidebar {
   position: fixed;
   -webkit-box-sizing: border-box;
@@ -172,23 +190,6 @@ button.button, a.button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  .sidebar .logo {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 41px 0 41px 10.5%; }
-    .sidebar .logo img {
-      margin-right: 12px; }
-    .sidebar .logo .logo__text {
-      font-family: 'MuliBold', sans-serif;
-      color: #A4A6B3;
-      font-size: 19px; }
   .sidebar nav {
     width: 100%;
     display: -webkit-box;
@@ -350,7 +351,8 @@ button.button, a.button {
     border-radius: 8px;
     background-color: white; }
     .main-section .content.login {
-      background-color: transparent; }
+      background-color: transparent;
+      margin-top: 0; }
     .main-section .content h2 {
       font-family: "Muli-Regular", sans-serif;
       color: #9FA2B4;
@@ -678,6 +680,9 @@ form {
 
 .login {
   margin-top: 50px; }
+  .login .logo {
+    width: max-content;
+    padding: 40px 0; }
 
 .login form {
   border-radius: 8px;
@@ -695,10 +700,10 @@ form {
   overflow: hidden;
   padding-bottom: 20px;
   width: 90%;
-  max-width: 380px;
-  margin: 0px auto;
-  -webkit-box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.4);
-  box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.4); }
+  max-width: 440px;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.2);
+  box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.2); }
   .login form .header {
     overflow: hidden;
     width: 100%;
@@ -708,7 +713,7 @@ form {
     display: -ms-flexbox;
     display: flex;
     padding: 0;
-    height: 50px;
+    height: 110px;
     margin-top: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -716,21 +721,16 @@ form {
     flex-direction: row;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-    .login form .header span {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      height: 100%;
-      padding-left: 20px;
-      font-family: "MuliBold", sans-serif;
-      font-size: 18px;
-      letter-spacing: 1px; }
+    align-items: center;
+    justify-content: center;
+    font-family: "MuliBold", sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #646464; }
   .login form .input-box {
+    margin-top: 15px;
     width: 100%;
+    max-width: 308px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -744,7 +744,7 @@ form {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 20px; }
+    margin-bottom: 50px; }
     .login form .input-box input {
       border: none;
       background: #F7F9FA;
@@ -768,45 +768,28 @@ form {
     .login form .input-forget input {
       margin-bottom: 20px; }
 
-.login form .header > .sign {
-  width: 50%;
-  color: #fff;
-  background: -o-linear-gradient(270.57deg, #3751FF -13.56%, #3751FF 158.28%, #281AC8 158.3%);
-  background: linear-gradient(179.43deg, #3751FF -13.56%, #3751FF 158.28%, #281AC8 158.3%);
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+.link-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 380px; }
+  .link-block .link-text {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #646464;
+    font-family: "Muli-Regular", sans-serif;
+    letter-spacing: 0.8px; }
 
-.login form .header > .sign:hover {
-  opacity: 0.8; }
-
-.login form .header > .reg {
-  width: 50%;
-  color: #fff;
-  background: #363740;
-  padding: 10px;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
-
-.login form .header > .reg:hover {
-  opacity: 0.8; }
-
-/*end header*/
 .login form .input-info, .login form .reg-info {
   text-align: center;
-  margin-top: 50px;
   width: 100%;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.login form .reg-info {
-  display: none; }
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .login form input:focus {
   background: #ddd;
@@ -815,14 +798,15 @@ form {
 
 .login form button {
   margin: auto;
-  margin-bottom: 25px; }
+  margin-bottom: 45px;
+  font-weight: 700; }
 
-.login form .forget {
-  font-weight: bold;
-  color: #9FA2B4;
-  font-size: 14px;
+.login form .link-text {
+  color: #000;
+  font-size: 19px;
   margin: auto;
-  text-align: center; }
+  text-align: center;
+  line-height: 2.3; }
 
 .login form .terms {
   margin-right: 20px;
@@ -831,6 +815,9 @@ form {
   font-size: 10px;
   float: right;
   margin-top: 4px; }
+
+form.registration {
+  display: none; }
 
 @media screen and (max-width: 990px) {
   .wrap {
