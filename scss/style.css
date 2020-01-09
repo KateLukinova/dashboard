@@ -370,10 +370,26 @@ button.button, a.button {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    padding: 35px 0;
-    border-radius: 8px;
-    background-color: white; }
+    align-items: center; }
+    .main-section .content .content__message {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 35px 0;
+      border-radius: 8px;
+      background-color: white;
+      margin-bottom: 20px; }
     .main-section .content.login {
       background-color: transparent;
       margin-top: 0; }
@@ -396,7 +412,8 @@ button.button, a.button {
       max-width: 600px; }
       .main-section .content p.p-message {
         font-size: 18px;
-        line-height: 2.5; }
+        line-height: 1.5;
+        margin-top: 20px; }
     .main-section .content .alert-notice {
       font-size: 16px;
       color: #f44336; }
@@ -501,6 +518,10 @@ button.button, a.button {
       .main-section .content.settings .input-box {
         margin-bottom: 0;
         max-width: 416px; }
+    .main-section .content.kyc-attention h2 {
+      color: #FF0909; }
+    .main-section .content.kyc-passed h2 {
+      color: #28EC17; }
 
 form {
   width: 100%;
@@ -823,7 +844,6 @@ form {
 .input-box {
   margin-top: 15px;
   width: 100%;
-  max-width: 308px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

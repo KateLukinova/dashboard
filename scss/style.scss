@@ -422,9 +422,26 @@ button.button, a.button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 35px 0;
-    border-radius: 8px;
-    background-color: white;
+    .content__message {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 35px 0;
+      border-radius: 8px;
+      background-color: white;
+      margin-bottom: 20px;
+    }
     &.login {
       background-color: transparent;
       margin-top: 0;
@@ -449,7 +466,8 @@ button.button, a.button {
       max-width: 600px;
       &.p-message {
         font-size: 18px;
-        line-height: 2.5;
+        line-height: 1.5;
+        margin-top: 20px;
       }
     }
     .alert-notice {
@@ -570,6 +588,16 @@ button.button, a.button {
       .input-box {
         margin-bottom: 0;
         max-width: 416px;
+      }
+    }
+    &.kyc-attention {
+      h2 {
+        color: #FF0909;
+      }
+    }
+    &.kyc-passed {
+      h2 {
+        color: #28EC17;
       }
     }
   }
@@ -934,7 +962,6 @@ form {
 .input-box {
   margin-top: 15px;
   width: 100%;
-  max-width: 308px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
