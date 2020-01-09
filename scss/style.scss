@@ -157,15 +157,6 @@ input, select {
   outline: none;
   border: none;
   padding-left: 12px;
-  &:required {
-    border: inherit;
-  }
-  &:required:invalid {
-    border: 1px solid #F12B2C;
-  }
-  &:required:valid {
-    border: 1px solid #11D030;
-  }
 }
 
 input:focus, button:focus {
@@ -179,6 +170,32 @@ label {
   color: #858585;
   font-family: "Muli-Regular", sans-serif;
   font-size: 14px;
+}
+
+.credit-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 8px;
+  box-shadow: none;
+  border: none;
+}
+
+.credit-cell {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button.button, a.button {

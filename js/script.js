@@ -72,4 +72,7 @@ $(document).ready(function() {
         $(".input-forget").css("display", "flex")
     });
 
+    jQuery(function ( $ ){
+        $(".credit").credit();
+    });
 });

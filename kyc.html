@@ -6,9 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KYC</title>
+    <link rel="stylesheet" href="scss/credit.css">
     <link rel="stylesheet" href="scss/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
     <script src="js/jQuery.js"></script>
+    <script src="js/credit.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -248,8 +250,8 @@
                         <div class="input-col">
                             <h2>Assign Card</h2>
                             <div class="input-box">
-                                <label for="card-number">Enter Card Number*</label>
-                                <select required="required" name="card-number" id="card-number"><optgroup><option value="2">Passport</option><option value="3">ID Card</option></optgroup></select>
+                                <label for="cc">Enter Card Number*</label>
+                                <input id="cc" type="tel" name="credit_card_number" class="credit" pattern="[3-6][0-9 ]{15,18}" data-exception="cc">
                             </div>
                         </div>
                     </div>
