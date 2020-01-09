@@ -865,6 +865,10 @@ form {
 
 .login {
   margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .logo {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1062,19 +1066,6 @@ form {
   margin: auto;
   text-align: center;
   line-height: 2.3;
-}
-
-.login form .terms {
-  margin-right: 20px;
-  font-weight: bold;
-  color: #01aef2;
-  font-size: 10px;
-  float: right;
-  margin-top: 4px;
-}
-
-form.registration {
-  display: none;
 }
 
 .table {

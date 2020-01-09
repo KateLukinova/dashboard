@@ -59,15 +59,6 @@ $(document).ready(function() {
 
     // account form
 
-    $("#reg-form-button").click(function () {
-        $("form.enter-form").css('display', 'none');
-        $("form.registration").css('display', 'flex');
-    });
-    $("#enter-form-button").click(function () {
-        $("form.enter-form").css('display', 'flex');
-        $("form.registration").css('display', 'none');
-    });
-
     $(".forget").click(function () {
         $(".input-forget").css("display", "flex")
     });
