@@ -121,10 +121,29 @@ a {
   text-decoration: none;
   font-family: inherit; }
 
+input, select {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding-left: 12px; }
+
 input:focus, button:focus {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none; }
+
+label {
+  padding: 12px 0;
+  color: #858585;
+  font-family: "Muli-Regular", sans-serif;
+  font-size: 14px; }
 
 button.button, a.button {
   -webkit-box-sizing: border-box;
@@ -149,6 +168,11 @@ button.button, a.button {
   border-radius: 100px;
   margin: 30px 0;
   border: none; }
+
+.hint-text {
+  font-size: 10px;
+  color: #000000;
+  margin: 10px 0; }
 
 .wrap {
   display: -webkit-box;
@@ -467,6 +491,16 @@ button.button, a.button {
         width: 134px; }
     .main-section .content.form-block {
       background-color: transparent; }
+    .main-section .content.settings {
+      background-color: transparent; }
+      .main-section .content.settings h2 {
+        font-family: 'MuliBold', sans-serif;
+        font-size: 24px;
+        color: #252733;
+        text-align: center; }
+      .main-section .content.settings .input-box {
+        margin-bottom: 0;
+        max-width: 416px; }
 
 form {
   width: 100%;
@@ -519,22 +553,6 @@ form {
           margin-bottom: 15px; }
         form .fieldset .input-row .input-col .input-box {
           width: 100%; }
-    form .fieldset label {
-      padding: 12px 0;
-      color: #858585;
-      font-family: "Muli-Regular", sans-serif;
-      font-size: 14px; }
-    form .fieldset input, form .fieldset select {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      height: 46px;
-      background-color: white;
-      border-radius: 10px;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      outline: none;
-      border: none;
-      padding-left: 12px; }
     form .fieldset .file-upload input {
       padding: 12px; }
     form .fieldset .cell-box select {
@@ -790,6 +808,36 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.input-settings {
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 440px; }
+
+.input-box {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 308px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 50px; }
 
 .login form input:focus {
   background: #ddd;
