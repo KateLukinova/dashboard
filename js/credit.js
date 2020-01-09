@@ -36,7 +36,7 @@
             	credit_control.append(
             			$("<input />",{
             				class: "credit-cell",
-            				placeholder: "****",
+            				placeholder: "----",
             				maxlength: 4
             			})
             		);
