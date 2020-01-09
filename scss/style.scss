@@ -1143,6 +1143,28 @@ form.registration {
     }
   }
 }
+
+select.lang {
+  width: 80px;
+  border: 1px solid #9fa2b4;
+  border-radius: 100px;
+  margin-left: 15px;
+  font-family: "Muli-Bold", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9fa2b4;
+  option {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.button-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 @media screen and (max-width: 990px) {
   .wrap {
     -webkit-box-orient: vertical;
