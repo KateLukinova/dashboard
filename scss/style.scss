@@ -173,9 +173,16 @@ label {
 }
 
 .credit-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   height: 40px;
@@ -186,6 +193,7 @@ label {
   background-color: #fff;
   background-image: none;
   border-radius: 8px;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
 }
@@ -193,8 +201,14 @@ label {
 .credit-cell {
   height: 100%;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -646,10 +660,12 @@ form {
   align-items: center;
   max-width: 800px;
   margin-top: 20px;
-  h2 {
+  legend {
+    font-family: 'MuliBold', sans-serif;
+    font-size: 24px;
     -ms-flex-item-align: start;
     align-self: flex-start;
-    color: black!important;
+    color: black;
   }
   .fieldset {
     width: 100%;
@@ -850,6 +866,8 @@ form {
 .login {
   margin-top: 50px;
   .logo {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 40px 0;
   }
@@ -893,6 +911,8 @@ form {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-family: "MuliBold", sans-serif;
     font-weight: 600;
@@ -947,8 +967,14 @@ form {
 }
 
 .link-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 90%;
   max-width: 380px;
@@ -967,8 +993,15 @@ form {
   padding: 0 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -979,8 +1012,15 @@ form {
   padding: 0 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 440px;
 }
@@ -1035,6 +1075,73 @@ form {
 
 form.registration {
   display: none;
+}
+
+.table {
+  width: 100%;
+  max-width: 1120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid rgba(54, 55, 64, 0.49);
+  border-left: 1px solid rgba(54, 55, 64, 0.49);
+  .table__stroke {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 35px;
+    border-bottom: 1px solid rgba(54, 55, 64, 0.49);
+    line-height: 1.5;
+    &.table__header {
+      background-color: rgba(54, 55, 64, 0.49);
+      color: white;
+      font-weight: 500;
+    }
+    .table__cell {
+      width: 33%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      &.table__cell--center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+      }
+      &.table__cell--right {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        text-align: right;
+      }
+    }
+  }
 }
 @media screen and (max-width: 990px) {
   .wrap {
@@ -1243,5 +1350,12 @@ form.registration {
   .popup {
     margin-top: 50px;
   }
+  .table {
+    .table__stroke {
+      padding: 0 10px;
+      .table__cell {
+        font-size: 11px;
+      }
+    }
+  }
 }
-

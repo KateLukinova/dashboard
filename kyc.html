@@ -41,7 +41,7 @@
                 <i class="fas fa-user-tie"></i>
                 <span>Deposit</span>
             </a>
-            <a href="#" class="nav__item">
+            <a href="fees.html" class="nav__item">
                 <i class="fas fa-book"></i>
                 <span>Fees</span>
             </a>
@@ -107,8 +107,8 @@
                 - Cuba, Iran, North Korea, Sudan, Syria, Iraq, Liberia, Zimbabwe, Crimea.
             </p>
             <form id="form" action="https://cards.cron.global/api/v1/users/sign_up" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
-                <h2>Personal Information</h2>
                 <fieldset class="fieldset">
+                    <legend>Personal Information</legend>
                     <div class="input-row">
                         <div class="input-box">
                             <label for="profile_firstname_local">First Name (English)*</label>
@@ -150,12 +150,11 @@
                         <div class="input-box">
                             <label for="profile_occupation_code">Occupation*</label>
                             <select required="required" name="profile[occupation_code]" id="profile_occupation_code"><optgroup><option value="001">Civil Servant</option><option value="002">Financial Investment Broker / Insurance Broker</option><option value="003">Property Agent</option><option value="004">Lawyer / Legal Counsel</option><option value="005">Accountant / Accountant Financial Officer</option><option value="006">Doctor/Assistant Medical Staff</option><option value="007">Construction / Engineering Staff</option><option value="008">Police Officers</option><option value="009">Cashier</option><option value="010">Salesperson/Store Supervisor</option><option value="011">Specialist</option><option value="012">Social and Counseling Workers</option><option value="013">Educators</option><option value="014">Chef</option><option value="015">Designer</option><option value="017">Security Guard</option><option value="018">Senior Management</option><option value="019">Management or Civilian Staff</option><option value="020">Blue Collar Staff</option><option value="021">Service Staff</option><option value="022">Housewife or Houseworker</option><option value="023">Students</option><option value="024">Unemployed</option><option value="025">Employer / Self-Employed</option><option value="026">Retired People</option></optgroup></select>
-                            <br/><br/>
                         </div>
                     </div>
                 </fieldset>
-                <h2>Address Information</h2>
                 <fieldset class="fieldset">
+                    <legend>Address Information</legend>
                     <div class="input-row">
                         <div class="input-box">
                             <label for="profile_address">Address*</label>
@@ -177,10 +176,10 @@
                        </div>
                    </div>
                 </fieldset>
-                <fieldset class="fieldset">
+                <div class="fieldset">
                     <div class="input-row">
-                        <div class="input-col">
-                            <h2>ID Document / Passport</h2>
+                        <fieldset class="input-col">
+                            <legend>ID Document / Passport</legend>
                             <div class="input-box">
                                 <label for="profile_doc_pid_type">Document Type*</label>
                                 <select required="required" name="profile[doc_pid_type]" id="profile_doc_pid_type"><optgroup><option value="2">Passport</option><option value="3">ID Card</option></optgroup></select>
@@ -193,9 +192,9 @@
                                 <label for="profile_doc_pid_image">Image File*</label>
                                 <input required="required" type="file" name="profile[doc_pid_image]" id="profile_doc_pid_image" />
                             </div>
-                        </div>
-                        <div class="input-col">
-                            <h2>ID Document Back Side</h2>
+                        </fieldset>
+                        <fieldset class="input-col">
+                            <legend>ID Document Back Side</legend>
                             <div class="input-box">
                                 <label for="profile_doc_pid_type_bs">Document Type*</label>
                                 <select required="required" name="profile[doc_pid_type]" id="profile_doc_pid_type_bs"><optgroup><option value="2">Passport</option><option value="3">ID Card</option></optgroup></select>
@@ -208,13 +207,13 @@
                                 <label for="profile_doc_pid_image_bs">Image File*</label>
                                 <input required="required" type="file" name="profile[doc_pid_image]" id="profile_doc_pid_image_bs" />
                             </div>
-                        </div>
+                        </fieldset>
                     </div>
-                </fieldset>
-                <fieldset class="fieldset">
+                </div>
+                <div class="fieldset">
                     <div class="input-row">
-                        <div class="input-col">
-                            <h2>Selfie Photo</h2>
+                        <fieldset class="input-col">
+                            <legend>Selfie Photo</legend>
                             <div class="input-box">
                                 <label for="profile_doc_pid_type_sp">Document Type*</label>
                                 <select required="required" name="profile[doc_pid_type]" id="profile_doc_pid_type_sp"><optgroup><option value="2">Passport</option><option value="3">ID Card</option></optgroup></select>
@@ -227,9 +226,9 @@
                                 <label for="profile_doc_pid_image_sp">Image File*</label>
                                 <input required="required" type="file" name="profile[doc_pid_image]" id="profile_doc_pid_image_sp" />
                             </div>
-                        </div>
-                        <div class="input-col">
-                            <h2>Sign</h2>
+                        </fieldset>
+                        <fieldset class="input-col">
+                            <legend>Sign</legend>
                             <div class="input-box">
                                 <label for="profile_doc_pid_type_s">Document Type*</label>
                                 <select required="required" name="profile[doc_pid_type]" id="profile_doc_pid_type_s"><optgroup><option value="2">Passport</option><option value="3">ID Card</option></optgroup></select>
@@ -242,22 +241,22 @@
                                 <label for="profile_doc_pid_image_s">Image File*</label>
                                 <input required="required" type="file" name="profile[doc_pid_image]" id="profile_doc_pid_image_s" />
                             </div>
-                        </div>
+                        </fieldset>
                     </div>
-                </fieldset>
-                <fieldset class="fieldset">
+                </div>
+                <div class="fieldset">
                     <div class="input-row">
-                        <div class="input-col">
-                            <h2>Assign Card</h2>
+                        <fieldset class="input-col">
+                            <legend>Assign Card</legend>
                             <div class="input-box">
                                 <label for="cc">Enter Card Number*</label>
                                 <input id="cc" type="tel" name="credit_card_number" class="credit" pattern="[3-6][0-9 ]{15,18}" data-exception="cc">
                             </div>
-                        </div>
+                        </fieldset>
                     </div>
-                </fieldset>
+                </div>
                 <fieldset class="fieldset">
-                    <h2>Contacts</h2>
+                    <legend>Contacts</legend>
                     <div class="input-row">
                         <div class="input-box">
                             <label for="email">Email*</label>
